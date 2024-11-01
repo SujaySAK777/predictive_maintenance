@@ -32,5 +32,21 @@ def predict_api():
     # Return JSON response
     return jsonify(prediction=str(result))
 
+@app.route('/predict', methods=['POST'])
+def predict():
+    # Gather data from form inputs and convert to float
+    data = [float(x) for x in request.form.values()]
+    
+    # Transform the input using the pre-loaded scaler
+    final_input = scaler.transform(np.array(data).reshape(1, -1))
+    print("Transformed Input:", final_input)
+    
+    # Make a prediction using the model
+    output = model.predict(final_input)[0]
+    
+    # Display prediction result in a user-friendly format
+    return render_template("home.html", prediction_text="The failure is: {}".format(output))
+
+
 if __name__ == "__main__":
     app.run(debug=True)

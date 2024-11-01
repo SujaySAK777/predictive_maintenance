@@ -1,3 +1,113 @@
-<h1>
-    HelloWorld!!
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predictive Maintenance Prediction</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Arimo|Hind:300|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arimo', sans-serif;
+    }
+
+    /* Background and Centering */
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    /* Container */
+    .login {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    /* Heading */
+    .login h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #764ba2;
+    }
+
+    /* Input Fields */
+    .login input[type="text"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    
+    .login input[type="text"]:focus {
+      border-color: #764ba2;
+      outline: none;
+    }
+
+    /* Button */
+    .login button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 1rem;
+      background-color: #667eea;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login button:hover {
+      background-color: #764ba2;
+    }
+
+    /* Prediction Result */
+    .prediction-text {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <h1>Predictive Maintenance</h1>
+
+    <!-- Main Input Form for Predictive Maintenance -->
+    <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" name="Type" placeholder="Type (e.g., 0, 1, 2)" required="required" />
+      <input type="text" name="AirTemperature" placeholder="Air Temperature" required="required" />
+      <input type="text" name="ProcessTemperature" placeholder="Process Temperature" required="required" />
+      <input type="text" name="RPM" placeholder="RPM" required="required" />
+      <input type="text" name="Torque" placeholder="Torque" required="required" />
+      <input type="text" name="ToolWear" placeholder="Tool Wear" required="required" />
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <!-- Display prediction result -->
+    <div class="prediction-text">
+      {{ prediction_text }}
+    </div>
+  </div>
+</body>
+</html>
