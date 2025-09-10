@@ -1,5 +1,5 @@
 ```markdown
-# ⚙️ Predictive Maintenance System
+**⚙️ Predictive Maintenance System**
 
 A Flask-based web application that predicts and classifies equipment failures in industrial systems using a trained machine learning model. The system leverages real-time sensor data inputs to detect faults like:
 
@@ -8,11 +8,11 @@ A Flask-based web application that predicts and classifies equipment failures in
 - 🏋️ Overstrain Failure  
 - 🛠️ Tool Wear Failure  
 
-This helps industries take preventive actions before costly breakdowns occur.
+This helps industries take preventive actions before costly breakdowns occur.  
 
 ---
 
-## 🚀 Features
+**🚀 Features**
 
 - 🔮 Real-time fault prediction using a trained ML model (model.pkl).  
 - 🌐 Supports both form-based inputs (via web UI) and API-based inputs (/predict_api).  
@@ -21,7 +21,7 @@ This helps industries take preventive actions before costly breakdowns occur.
 
 ---
 
-## 🛠️ Tech Stack
+**🛠️ Tech Stack**
 
 - 🐍 Python 3.7+  
 - ⚡ Flask (Backend & API)  
@@ -31,7 +31,7 @@ This helps industries take preventive actions before costly breakdowns occur.
 
 ---
 
-## 📂 Project Structure
+**📂 Project Structure**
 
 ```
 
@@ -49,15 +49,15 @@ predictive\_maintenance/
 
 ---
 
-## ⚡ Installation & Setup
+**⚡ Installation & Setup**
 
-### 1️⃣ Clone the Repository
+1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/SujaySAK777/predictive_maintenance.git
 cd predictive_maintenance
 ````
 
-### 2️⃣ Create a Virtual Environment
+2️⃣ Create a Virtual Environment
 
 Using conda:
 
@@ -74,13 +74,13 @@ source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 ```
 
-### 3️⃣ Install Dependencies
+3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run the Application
+4️⃣ Run the Application
 
 ```bash
 python app.py
@@ -90,9 +90,9 @@ Flask will start at 👉 [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ---
 
-## 📌 Usage
+**📌 Usage**
 
-### 🌐 Web Interface
+🌐 Web Interface
 
 * Open browser → [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 * Enter sensor values:
@@ -104,9 +104,8 @@ Flask will start at 👉 [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
   * Tool Wear
 * Click Predict → The system will display the failure type.
 
-### 🔗 API Endpoint
-
-Send a POST request to /predict\_api
+🔗 API Endpoint
+Send a POST request to `/predict_api`
 
 Request Example (JSON):
 
@@ -132,7 +131,7 @@ Response Example:
 
 ---
 
-## 📜 Requirements
+**📜 Requirements**
 
 * Python 3.7+
 * Flask
@@ -148,11 +147,13 @@ pip install -r requirements.txt
 
 ---
 
-## 🔮 Future Improvements
+**🔮 Future Improvements**
 
 * 🚀 Deploy on Heroku / Render / AWS for cloud access
 * 📊 Add data visualization dashboards
 * 🤖 Enhance model with deep learning for better accuracy
 
 ```
+
+Do you also want me to **center the main project title** (like a banner style) for better aesthetics, or keep it left-aligned?
 ```
