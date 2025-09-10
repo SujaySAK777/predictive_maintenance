@@ -1,42 +1,41 @@
-⚙️ Predictive Maintenance System
+```markdown
+# ⚙️ Predictive Maintenance System
 
-A Flask-based web application that predicts and classifies equipment failures in industrial systems using a trained machine learning model.
-The system leverages real-time sensor data inputs to detect faults like:
+A **Flask-based web application** that predicts and classifies equipment failures in industrial systems using a trained machine learning model. The system leverages real-time sensor data inputs to detect faults like:
 
-🔥 Heat Dissipation Failure
-
-⚡ Power Failure
-
-🏋️ Overstrain Failure
-
-🛠️ Tool Wear Failure
+- 🔥 **Heat Dissipation Failure**
+- ⚡ **Power Failure**
+- 🏋️ **Overstrain Failure**
+- 🛠️ **Tool Wear Failure**
 
 This helps industries take preventive actions before costly breakdowns occur.
 
-🚀 Features
+---
 
-🔮 Real-time fault prediction using a trained ML model (model.pkl).
+## 🚀 Features
 
-🌐 Supports both form-based inputs (via web UI) and API-based inputs (/predict_api).
+- 🔮 Real-time fault prediction using a trained ML model (`model.pkl`).
+- 🌐 Supports both **form-based inputs** (via web UI) and **API-based inputs** (`/predict_api`).
+- 🖥️ Interactive Flask web interface for visualization.
+- 📊 Scalable with proper preprocessing (`scaling.pkl`).
 
-🖥️ Interactive Flask web interface for visualization.
+---
 
-📊 Scalable with proper preprocessing (scaling.pkl).
+## 🛠️ Tech Stack
 
-🛠️ Tech Stack
+- 🐍 Python 3.7+
+- ⚡ Flask (Backend & API)
+- 🤖 Scikit-learn (ML Model)
+- 🎨 HTML (Jinja2 templates) for frontend
+- 🔢 NumPy & Pickle (Preprocessing & Model Persistence)
 
-🐍 Python 3.7+
+---
 
-⚡ Flask (Backend & API)
+## 📂 Project Structure
 
-🤖 Scikit-learn (ML Model)
+```
 
-🎨 HTML (Jinja2 templates) for frontend
-
-🔢 NumPy & Pickle (Preprocessing & Model Persistence)
-
-📂 Project Structure
-predictive_maintenance/
+predictive\_maintenance/
 │── static/                 # Static assets (CSS, JS, Images)
 │── templates/
 │   └── home.html           # Web UI template
@@ -46,59 +45,72 @@ predictive_maintenance/
 │── requirements.txt        # Project dependencies
 │── README.md               # Project documentation
 
-⚡ Installation & Setup
-1️⃣ Clone the Repository
+````
+
+---
+
+## ⚡ Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/SujaySAK777/predictive_maintenance.git
 cd predictive_maintenance
+````
 
-2️⃣ Create a Virtual Environment
+### 2️⃣ Create a Virtual Environment
 
-Using conda:
+**Using conda:**
 
+```bash
 conda create -p venv python==3.7 -y
 conda activate venv/
+```
 
+**Using venv:**
 
-Using venv:
-
+```bash
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
+```
 
-3️⃣ Install Dependencies
+### 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Run the Application
+### 4️⃣ Run the Application
+
+```bash
 python app.py
+```
 
+Flask will start at 👉 **[http://127.0.0.1:5000/](http://127.0.0.1:5000/)**
 
-Flask will start at 👉 http://127.0.0.1:5000/
+---
 
-📌 Usage
-🌐 Web Interface
+## 📌 Usage
 
-Open browser → http://127.0.0.1:5000/
+### 🌐 Web Interface
 
-Enter sensor values:
+* Open browser → [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+* Enter sensor values:
 
-Air Temperature
+  * Air Temperature
+  * Process Temperature
+  * Rotational Speed
+  * Torque
+  * Tool Wear
+* Click **Predict** → The system will display the failure type.
 
-Process Temperature
+### 🔗 API Endpoint
 
-Rotational Speed
+Send a **POST** request to `/predict_api`
 
-Torque
+**Request Example (JSON):**
 
-Tool Wear
-
-Click Predict → The system will display the failure type.
-
-🔗 API Endpoint
-
-Send a POST request to /predict_api:
-
-Request Example (JSON):
-
+```json
 {
   "data": {
     "air_temperature": 298,
@@ -108,34 +120,39 @@ Request Example (JSON):
     "tool_wear": 120
   }
 }
+```
 
+**Response Example:**
 
-Response Example:
-
+```json
 {
   "prediction": "Heat Dissipation Failure"
 }
+```
 
-📜 Requirements
+---
 
-Python 3.7+
+## 📜 Requirements
 
-Flask
-
-NumPy
-
-Scikit-learn
-
-Pickle
+* Python 3.7+
+* Flask
+* NumPy
+* Scikit-learn
+* Pickle
 
 Install via:
 
+```bash
 pip install -r requirements.txt
+```
 
-🔮 Future Improvements
+---
 
-🚀 Deploy on Heroku / Render / AWS for cloud access
+## 🔮 Future Improvements
 
-📊 Add data visualization dashboards
+* 🚀 Deploy on **Heroku / Render / AWS** for cloud access
+* 📊 Add **data visualization dashboards**
+* 🤖 Enhance model with **deep learning** for better accuracy
 
-🤖 Enhance model with deep learning for better accuracy
+```
+```
