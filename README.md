@@ -1,37 +1,43 @@
+
 ```markdown
-**⚙️ Predictive Maintenance System**
+<h1 align="center">⚙️ Predictive Maintenance System</h1>
 
-A Flask-based web application that predicts and classifies equipment failures in industrial systems using a trained machine learning model. The system leverages real-time sensor data inputs to detect faults like:
-
-- 🔥 Heat Dissipation Failure  
-- ⚡ Power Failure  
-- 🏋️ Overstrain Failure  
-- 🛠️ Tool Wear Failure  
-
-This helps industries take preventive actions before costly breakdowns occur.  
+<p align="center">
+A Flask-based web application that predicts and classifies equipment failures in industrial systems using a trained machine learning model.  
+Leverages <b>real-time sensor data</b> to detect and prevent costly breakdowns.  
+</p>
 
 ---
 
-**🚀 Features**
+## 🔍 Failure Types Predicted
 
-- 🔮 Real-time fault prediction using a trained ML model (model.pkl).  
-- 🌐 Supports both form-based inputs (via web UI) and API-based inputs (/predict_api).  
-- 🖥️ Interactive Flask web interface for visualization.  
-- 📊 Scalable with proper preprocessing (scaling.pkl).  
-
----
-
-**🛠️ Tech Stack**
-
-- 🐍 Python 3.7+  
-- ⚡ Flask (Backend & API)  
-- 🤖 Scikit-learn (ML Model)  
-- 🎨 HTML (Jinja2 templates) for frontend  
-- 🔢 NumPy & Pickle (Preprocessing & Model Persistence)  
+- 🔥 **Heat Dissipation Failure**  
+- ⚡ **Power Failure**  
+- 🏋️ **Overstrain Failure**  
+- 🛠️ **Tool Wear Failure**
 
 ---
 
-**📂 Project Structure**
+## 🚀 Features
+
+- 🔮 Real-time fault prediction using a trained ML model (`model.pkl`)  
+- 🌐 Supports **Web UI (form inputs)** and **API (/predict_api)**  
+- 🖥️ Interactive Flask web interface  
+- 📊 Scalable with preprocessing (`scaling.pkl`)  
+
+---
+
+## 🛠️ Tech Stack
+
+- 🐍 **Python 3.7+**  
+- ⚡ **Flask** (Backend & API)  
+- 🤖 **Scikit-learn** (ML Model)  
+- 🎨 **HTML (Jinja2 templates)** for frontend  
+- 🔢 **NumPy & Pickle** (Preprocessing & Persistence)  
+
+---
+
+## 📂 Project Structure
 
 ```
 
@@ -49,24 +55,24 @@ predictive\_maintenance/
 
 ---
 
-**⚡ Installation & Setup**
+## ⚡ Installation & Setup
 
-1️⃣ Clone the Repository  
+### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/SujaySAK777/predictive_maintenance.git
 cd predictive_maintenance
 ````
 
-2️⃣ Create a Virtual Environment
+### 2️⃣ Create a Virtual Environment
 
-Using conda:
+Using **conda**:
 
 ```bash
 conda create -p venv python==3.7 -y
 conda activate venv/
 ```
 
-Using venv:
+Using **venv**:
 
 ```bash
 python -m venv venv
@@ -74,13 +80,13 @@ source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 ```
 
-3️⃣ Install Dependencies
+### 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4️⃣ Run the Application
+### 4️⃣ Run the Application
 
 ```bash
 python app.py
@@ -90,24 +96,25 @@ Flask will start at 👉 [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ---
 
-**📌 Usage**
+## 📌 Usage
 
-🌐 Web Interface
+### 🌐 Web Interface
 
-* Open browser → [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
-* Enter sensor values:
+1. Open browser → [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+2. Enter sensor values:
 
-  * Air Temperature
-  * Process Temperature
-  * Rotational Speed
-  * Torque
-  * Tool Wear
-* Click Predict → The system will display the failure type.
+   * Air Temperature
+   * Process Temperature
+   * Rotational Speed
+   * Torque
+   * Tool Wear
+3. Click **Predict** → System displays failure type
 
-🔗 API Endpoint
+### 🔗 API Endpoint
+
 Send a POST request to `/predict_api`
 
-Request Example (JSON):
+#### Request Example
 
 ```json
 {
@@ -121,7 +128,7 @@ Request Example (JSON):
 }
 ```
 
-Response Example:
+#### Response Example
 
 ```json
 {
@@ -131,7 +138,7 @@ Response Example:
 
 ---
 
-**📜 Requirements**
+## 📜 Requirements
 
 * Python 3.7+
 * Flask
@@ -147,13 +154,13 @@ pip install -r requirements.txt
 
 ---
 
-**🔮 Future Improvements**
+## 🔮 Future Improvements
 
-* 🚀 Deploy on Heroku / Render / AWS for cloud access
-* 📊 Add data visualization dashboards
-* 🤖 Enhance model with deep learning for better accuracy
+* 🚀 Deploy on **Heroku / Render / AWS**
+* 📊 Add **data visualization dashboards**
+* 🤖 Enhance model with **deep learning** for better accuracy
 
-```
+---
 
-Do you also want me to **center the main project title** (like a banner style) for better aesthetics, or keep it left-aligned?
+<p align="center">✨ Built with Python & Flask ✨</p>
 ```
