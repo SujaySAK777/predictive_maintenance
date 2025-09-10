@@ -1,19 +1,142 @@
+⚙️ Predictive Maintenance System
 
-This project is a Flask-based web application for predictive maintenance of industrial equipment. It uses a trained machine learning model to detect and classify different types of equipment failures—such as Heat Dissipation Failure, Overstrain Failure, Power Failure, and Tool Wear Failure—based on sensor data inputs like air temperature, process temperature, rotational speed, torque, and tool wear. The system supports both API-based and form-based input methods, enabling real-time fault prediction and visualization through an interactive web interface.
+A Flask-based web application that predicts and classifies equipment failures in industrial systems using a trained machine learning model.
+The system leverages real-time sensor data inputs to detect faults like:
 
+Heat Dissipation Failure
 
-### predictive_maintenance
+Overstrain Failure
 
-### Software and tools requirements 
+Power Failure
 
-1. [Github Account](https://github.com)
-2. [HerokuAccount](https://gihtub.com)
-3. [VsCodeIDE](https://code.visualstudio.com/)
-4. [GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+Tool Wear Failure
 
+This helps industries take preventive actions before costly breakdowns occur.
 
-Create a new environment
+🚀 Features
 
-```
+Real-time fault prediction using a trained ML model (model.pkl).
+
+Supports both form-based inputs (via web UI) and API-based inputs (via /predict_api).
+
+Interactive Flask web interface for visualization.
+
+Scalable with proper preprocessing (scaling.pkl).
+
+🛠️ Tech Stack
+
+Python 3.7+
+
+Flask (Backend & API)
+
+Scikit-learn / ML Model (for prediction)
+
+HTML (Jinja2 templates) for frontend
+
+NumPy & Pickle for preprocessing and model persistence
+
+📂 Project Structure
+predictive_maintenance/
+│── static/                 # Static assets (CSS, JS, Images)
+│── templates/
+│   └── home.html           # Web UI template
+│── model.pkl               # Trained ML model
+│── scaling.pkl             # Pre-fitted scaler
+│── app.py                  # Flask application
+│── requirements.txt        # Project dependencies
+│── README.md               # Project documentation
+
+⚡ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/SujaySAK777/predictive_maintenance.git
+cd predictive_maintenance
+
+2️⃣ Create a Virtual Environment
+
+Using conda:
+
 conda create -p venv python==3.7 -y
-```
+conda activate venv/
+
+
+Or using venv:
+
+python -m venv venv
+source venv/bin/activate  # for Mac/Linux
+venv\Scripts\activate     # for Windows
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Run the Application
+python app.py
+
+
+Flask will start at:
+👉 http://127.0.0.1:5000/
+
+📌 Usage
+🌐 Web Interface
+
+Open browser and go to http://127.0.0.1:5000/.
+
+Enter sensor values:
+
+Air Temperature
+
+Process Temperature
+
+Rotational Speed
+
+Torque
+
+Tool Wear
+
+Click Predict → It will show the type of failure.
+
+🔗 API Endpoint
+
+You can also send a JSON POST request to /predict_api:
+
+Request Example (JSON):
+
+{
+  "data": {
+    "air_temperature": 298,
+    "process_temperature": 310,
+    "rotational_speed": 1400,
+    "torque": 40,
+    "tool_wear": 120
+  }
+}
+
+
+Response Example:
+
+{
+  "prediction": "Heat Dissipation Failure"
+}
+
+📜 Requirements
+
+Python 3.7+
+
+Flask
+
+NumPy
+
+Scikit-learn
+
+Pickle
+
+Install via:
+
+pip install -r requirements.txt
+
+🔮 Future Improvements
+
+✅ Deploy on Heroku / Render / AWS for cloud access.
+
+✅ Add data visualization dashboards.
+
+✅ Enhance model with deep learning for better accuracy.
