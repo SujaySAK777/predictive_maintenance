@@ -3,37 +3,37 @@
 A Flask-based web application that predicts and classifies equipment failures in industrial systems using a trained machine learning model.
 The system leverages real-time sensor data inputs to detect faults like:
 
-Heat Dissipation Failure
+🔥 Heat Dissipation Failure
 
-Overstrain Failure
+⚡ Power Failure
 
-Power Failure
+🏋️ Overstrain Failure
 
-Tool Wear Failure
+🛠️ Tool Wear Failure
 
 This helps industries take preventive actions before costly breakdowns occur.
 
 🚀 Features
 
-Real-time fault prediction using a trained ML model (model.pkl).
+🔮 Real-time fault prediction using a trained ML model (model.pkl).
 
-Supports both form-based inputs (via web UI) and API-based inputs (via /predict_api).
+🌐 Supports both form-based inputs (via web UI) and API-based inputs (/predict_api).
 
-Interactive Flask web interface for visualization.
+🖥️ Interactive Flask web interface for visualization.
 
-Scalable with proper preprocessing (scaling.pkl).
+📊 Scalable with proper preprocessing (scaling.pkl).
 
 🛠️ Tech Stack
 
-Python 3.7+
+🐍 Python 3.7+
 
-Flask (Backend & API)
+⚡ Flask (Backend & API)
 
-Scikit-learn / ML Model (for prediction)
+🤖 Scikit-learn (ML Model)
 
-HTML (Jinja2 templates) for frontend
+🎨 HTML (Jinja2 templates) for frontend
 
-NumPy & Pickle for preprocessing and model persistence
+🔢 NumPy & Pickle (Preprocessing & Model Persistence)
 
 📂 Project Structure
 predictive_maintenance/
@@ -59,11 +59,11 @@ conda create -p venv python==3.7 -y
 conda activate venv/
 
 
-Or using venv:
+Using venv:
 
 python -m venv venv
-source venv/bin/activate  # for Mac/Linux
-venv\Scripts\activate     # for Windows
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
@@ -72,13 +72,12 @@ pip install -r requirements.txt
 python app.py
 
 
-Flask will start at:
-👉 http://127.0.0.1:5000/
+Flask will start at 👉 http://127.0.0.1:5000/
 
 📌 Usage
 🌐 Web Interface
 
-Open browser and go to http://127.0.0.1:5000/.
+Open browser → http://127.0.0.1:5000/
 
 Enter sensor values:
 
@@ -92,11 +91,11 @@ Torque
 
 Tool Wear
 
-Click Predict → It will show the type of failure.
+Click Predict → The system will display the failure type.
 
 🔗 API Endpoint
 
-You can also send a JSON POST request to /predict_api:
+Send a POST request to /predict_api:
 
 Request Example (JSON):
 
@@ -135,8 +134,8 @@ pip install -r requirements.txt
 
 🔮 Future Improvements
 
-✅ Deploy on Heroku / Render / AWS for cloud access.
+🚀 Deploy on Heroku / Render / AWS for cloud access
 
-✅ Add data visualization dashboards.
+📊 Add data visualization dashboards
 
-✅ Enhance model with deep learning for better accuracy.
+🤖 Enhance model with deep learning for better accuracy
