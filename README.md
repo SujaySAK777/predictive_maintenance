@@ -38,10 +38,10 @@ using a trained machine learning model. Leverages real-time sensor data 🔧 to 
   - cd predictive_maintenance
 
 2. Create Virtual Environment
-   Using conda:
-       conda create -p venv python=3.7 -y
-       conda activate venv/
-   Using venv:
+  - Using conda:
+       -conda create -p venv python=3.7 -y
+       -conda activate venv/
+  - Using venv:
        python -m venv venv
        # Mac/Linux
        source venv/bin/activate
@@ -49,11 +49,11 @@ using a trained machine learning model. Leverages real-time sensor data 🔧 to 
        venv\Scripts\activate
 
 3. Install Dependencies
-   pip install -r requirements.txt
+   - pip install -r requirements.txt
 
 4. Run the Application
-   python app.py
-   Access the app at: http://127.0.0.1:5000/
+   - python app.py
+   - Access the app at: http://127.0.0.1:5000/
 
 ----------------------------------------------------------------------------------------
 📌 USAGE 📌
