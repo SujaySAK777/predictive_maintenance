@@ -34,8 +34,8 @@ using a trained machine learning model. Leverages real-time sensor data 🔧 to 
 ⚡ INSTALLATION & SETUP ⚡
 ----------------------------------------------------------------------------------------
 1. Clone the Repository
-   git clone https://github.com/SujaySAK777/predictive_maintenance.git
-   cd predictive_maintenance
+  - git clone https://github.com/SujaySAK777/predictive_maintenance.git
+  - cd predictive_maintenance
 
 2. Create Virtual Environment
    Using conda:
