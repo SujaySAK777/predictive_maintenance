@@ -70,7 +70,7 @@ Web Interface:
 
 API Endpoint:
 - Send a POST request to /predict_api
-  Request Example:
+- Request Example:
     {
       "data": {
         "air_temperature": 298,
@@ -80,7 +80,7 @@ API Endpoint:
         "tool_wear": 120
       }
     }
-  Response Example:
+  - Response Example:
     {
       "prediction": "Heat Dissipation Failure 🔥"
     }
