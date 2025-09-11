@@ -80,7 +80,7 @@ API Endpoint:
         "tool_wear": 120
       }
     }
-  - Response Example:
+ - Response Example:
     {
       "prediction": "Heat Dissipation Failure 🔥"
     }
